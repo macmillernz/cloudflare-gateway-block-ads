@@ -3,6 +3,9 @@ name: Block ads update
 on:
   schedule:
     - cron: '0 * * * *'
+  push:
+    branches:
+      - '**'
 
 jobs:
   run_hourly:
