@@ -10,6 +10,11 @@ function error() {
     echo "Error: $1"
 }
 
+# Delete files
+echo "Deleting files..."
+rm oisd_small_domainswild2.txt
+rm oisd_small_domainswild2.txt.*
+
 # Get current lists from Cloudflare
 current_lists=$(curl -sSfL -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists" \
     -H "Authorization: Bearer ${API_TOKEN}" \
