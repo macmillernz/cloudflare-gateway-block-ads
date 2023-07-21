@@ -43,11 +43,9 @@ current_policies=$(curl -sSfL -X GET "https://api.cloudflare.com/client/v4/accou
 
 # Count number of lists that have $PREFIX in name
 current_lists_count=$(echo "${current_lists}" | jq -r --arg PREFIX "${PREFIX}" 'if (.result | length > 0) then .result | map(select(.name | contains($PREFIX))) | length else 0 end') || error "Failed to count current lists"
-# echo "current_lists_count: ${current_lists_count}"
 
 # Count number of lists without $PREFIX in name
 current_lists_count_without_prefix=$(echo "${current_lists}" | jq -r --arg PREFIX "${PREFIX}" 'if (.result | length > 0) then .result | map(select(.name | contains($PREFIX) | not)) | length else 0 end') || error "Failed to count current lists without prefix"
-# echo "current_lists_count_without_prefix: ${current_lists_count_without_prefix}"
 
 # Ensure total_lists name is less than or equal to $MAX_LISTS - current_lists_count_without_prefix
 [[ ${total_lists} -le $((MAX_LISTS - current_lists_count_without_prefix)) ]] || error "The number of lists required (${total_lists}) is greater than the maximum allowed (${MAX_LISTS - current_lists_count_without_prefix})"
@@ -93,18 +91,15 @@ if [[ ${current_lists_count} -gt 0 ]]; then
 
         # Create list item values for removal
         list_items_values=$(echo "${list_items}" | jq -r '.result | map(.value) | map(select(. != null))')
-        # echo "list_items_values: ${list_items_values}"
 
         # Create list item array for appending from first chunked list
         list_items_array=$(jq -R -s 'split("\n") | map(select(length > 0) | { "value": . })' "${chunked_lists[0]}")
-        # echo "list_items_array: ${list_items_array}"
 
         # Create payload
         payload=$(jq -n --argjson append_items "$list_items_array" --argjson remove_items "$list_items_values" '{
             "append": $append_items,
             "remove": $remove_items
         }')
-        # echo "payload: ${payload}"
 
         # Patch list
         list=$(curl -sSfL -X PATCH "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}" \
@@ -222,7 +217,6 @@ json_data='{
     },
     "filters":["dns"]
 }'
-# echo "json_data: ${json_data}"
 
 [[ -z "${policy_id}" || "${policy_id}" == "null" ]] &&
 {
