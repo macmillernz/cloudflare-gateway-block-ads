@@ -1,0 +1,25 @@
+name: Block ads update
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  run_hourly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install jq, curl and other utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl coreutils
+
+      - name: Run the script
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+        run: |
+          chmod +x block_ads.sh
+          ./block_ads.sh
