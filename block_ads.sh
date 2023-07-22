@@ -87,7 +87,7 @@ if [[ ${current_lists_count} -gt 0 ]]; then
         # Get list contents
         list_items=$(curl -sSfL -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}/items?limit=${MAX_LIST_SIZE}" \
         -H "Authorization: Bearer ${API_TOKEN}" \
-        -H "Content-Type: application/json") || error "Failed to get current lists from Cloudflare"
+        -H "Content-Type: application/json") || error "Failed to get list ${list_id} contents"
 
         # Create list item values for removal
         list_items_values=$(echo "${list_items}" | jq -r '.result | map(.value) | map(select(. != null))')
