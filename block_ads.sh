@@ -15,8 +15,16 @@ function error() {
     exit 1
 }
 
+# Define silent error function
+function silent_error() {
+    echo "Silent error: $1"
+    rm oisd_small_domainswild2.txt
+    rm oisd_small_domainswild2.txt.*
+    exit 0
+}
+
 # Download the latest domains list
-curl -sSfL https://small.oisd.nl/domainswild2 | grep -vE '^\s*(#|$)' > oisd_small_domainswild2.txt || error "Failed to download the domains list"
+curl -sSfL https://small.oisd.nl/domainswild2 | grep -vE '^\s*(#|$)' > oisd_small_domainswild2.txt || silent_error "Failed to download the domains list"
 
 # Ensure the file is not empty
 [[ -s oisd_small_domainswild2.txt ]] || error "The domains list is empty"
