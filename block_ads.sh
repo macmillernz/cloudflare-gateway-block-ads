@@ -10,14 +10,14 @@ MAX_LISTS=100
 # Define error function
 function error() {
     echo "Error: $1"
-    rm oisd_small_domainswild2.txt.* > /dev/null
+    rm -f oisd_small_domainswild2.txt.*
     exit 1
 }
 
 # Define silent error function
 function silent_error() {
     echo "Silent error: $1"
-    rm oisd_small_domainswild2.txt.* > /dev/null
+    rm -f oisd_small_domainswild2.txt.*
     exit 0
 }
 
@@ -122,7 +122,7 @@ if [[ ${current_lists_count} -gt 0 ]]; then
         used_list_ids+=("${list_id}")
 
         # Delete the first chunked file and in the list
-        rm "${chunked_lists[0]}"
+        rm -f "${chunked_lists[0]}"
         chunked_lists=("${chunked_lists[@]:1}")
 
         # Increment list counter
@@ -154,7 +154,7 @@ for file in "${chunked_lists[@]}"; do
     used_list_ids+=("$(echo "${list}" | jq -r '.result.id')")
 
     # Delete the file
-    rm "${file}"
+    rm -f "${file}"
 
     # Increment list counter
     list_counter=$((list_counter + 1))
