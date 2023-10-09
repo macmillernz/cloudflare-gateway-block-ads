@@ -10,14 +10,14 @@ MAX_LISTS=100
 # Define error function
 function error() {
     echo "Error: $1"
-    rm oisd_small_domainswild2.txt.*
+    rm oisd_small_domainswild2.txt.* > /dev/null
     exit 1
 }
 
 # Define silent error function
 function silent_error() {
     echo "Silent error: $1"
-    rm oisd_small_domainswild2.txt.*
+    rm oisd_small_domainswild2.txt.* > /dev/null
     exit 0
 }
 
