@@ -10,7 +10,6 @@ MAX_LISTS=100
 # Define error function
 function error() {
     echo "Error: $1"
-    rm oisd_small_domainswild2.txt
     rm oisd_small_domainswild2.txt.*
     exit 1
 }
@@ -18,13 +17,15 @@ function error() {
 # Define silent error function
 function silent_error() {
     echo "Silent error: $1"
-    rm oisd_small_domainswild2.txt
     rm oisd_small_domainswild2.txt.*
     exit 0
 }
 
 # Download the latest domains list
 curl -sSfL https://small.oisd.nl/domainswild2 | grep -vE '^\s*(#|$)' > oisd_small_domainswild2.txt || silent_error "Failed to download the domains list"
+
+# Check if the file has changed
+git diff --exit-code oisd_small_domainswild2.txt > /dev/null || silent_error "The domains list has not changed"
 
 # Ensure the file is not empty
 [[ -s oisd_small_domainswild2.txt ]] || error "The domains list is empty"
@@ -34,6 +35,11 @@ total_lines=$(wc -l < oisd_small_domainswild2.txt)
 
 # Ensure the file is not over the maximum allowed lines
 (( total_lines <= MAX_LIST_SIZE * MAX_LISTS )) || error "The domains list has more than $((MAX_LIST_SIZE * MAX_LISTS)) lines"
+
+# Add, commit and push the file
+git add oisd_small_domainswild2.txt || error "Failed to add the domains list to repo"
+git commit -m "Update domains list" || error "Failed to commit the domains list to repo"
+git push origin master || error "Failed to push the domains list to repo"
 
 # Calculate the number of lists required
 total_lists=$((total_lines / MAX_LIST_SIZE))
@@ -60,9 +66,6 @@ current_lists_count_without_prefix=$(echo "${current_lists}" | jq -r --arg PREFI
 
 # Split lists into chunks of $MAX_LIST_SIZE
 split -l ${MAX_LIST_SIZE} oisd_small_domainswild2.txt oisd_small_domainswild2.txt. || error "Failed to split the domains list"
-
-# Delete the original file
-rm oisd_small_domainswild2.txt
 
 # Create array of chunked lists
 chunked_lists=()
