@@ -1,17 +1,3 @@
-# Version: 202310092005
-# Title: oisd small
-# Description: Block. Don't break.
-# Last modified: 2023-10-09T20:05:30+0000
-# Expires: 1 hours
-# Homepage: https://oisd.nl
-# License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
-# Syntax: Domains (wildcards) without *.
-# Maintainer: Stephan van Ruth
-# Contact: contact@oisd.nl
-
-# All domains and their subdomains should be blocked
-# Entry: "example.com" should block access to "example.com" and "subdomain.example.com" but not "thiseexample.com"
-
 0.101tubeporn.com
 0.code.cotsta.ru
 000.gaysexe.free.fr
