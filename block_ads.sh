@@ -38,7 +38,7 @@ total_lines=$(wc -l < oisd_small_domainswild2.txt)
 
 # Add, commit and push the file
 git add oisd_small_domainswild2.txt || error "Failed to add the domains list to repo"
-git commit -m "Update domains list" || error "Failed to commit the domains list to repo"
+git commit -m "Update domains list" --author=. || error "Failed to commit the domains list to repo"
 git push origin master || error "Failed to push the domains list to repo"
 
 # Calculate the number of lists required
