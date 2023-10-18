@@ -36,13 +36,6 @@ total_lines=$(wc -l < oisd_small_domainswild2.txt)
 # Ensure the file is not over the maximum allowed lines
 (( total_lines <= MAX_LIST_SIZE * MAX_LISTS )) || error "The domains list has more than $((MAX_LIST_SIZE * MAX_LISTS)) lines"
 
-# Add, commit and push the file
-git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
-git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
-git add oisd_small_domainswild2.txt || error "Failed to add the domains list to repo"
-git commit -m "Update domains list" --author=. || error "Failed to commit the domains list to repo"
-git push origin main || error "Failed to push the domains list to repo"
-
 # Calculate the number of lists required
 total_lists=$((total_lines / MAX_LIST_SIZE))
 [[ $((total_lines % MAX_LIST_SIZE)) -ne 0 ]] && total_lists=$((total_lists + 1))
@@ -256,3 +249,10 @@ for list_id in "${excess_list_ids[@]}"; do
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json" > /dev/null || error "Failed to delete list ${list_id}"
 done
+
+# Add, commit and push the file
+git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
+git add oisd_small_domainswild2.txt || error "Failed to add the domains list to repo"
+git commit -m "Update domains list" --author=. || error "Failed to commit the domains list to repo"
+git push origin main || error "Failed to push the domains list to repo"
