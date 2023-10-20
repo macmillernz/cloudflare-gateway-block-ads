@@ -23,7 +23,7 @@ function silent_error() {
 }
 
 # Download the latest domains list
-curl -sSfL --retry "$MAX_RETRIES" https://small.oisd.nl/domainswild2 | grep -vE '^\s*(#|$)' > oisd_small_domainswild2.txt || silent_error "Failed to download the domains list"
+curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors https://small.oisd.nl/domainswild2 | grep -vE '^\s*(#|$)' > oisd_small_domainswild2.txt || silent_error "Failed to download the domains list"
 
 # Check if the file has changed
 git diff --exit-code oisd_small_domainswild2.txt > /dev/null && silent_error "The domains list has not changed"
@@ -42,12 +42,12 @@ total_lists=$((total_lines / MAX_LIST_SIZE))
 [[ $((total_lines % MAX_LIST_SIZE)) -ne 0 ]] && total_lists=$((total_lists + 1))
 
 # Get current lists from Cloudflare
-current_lists=$(curl -sSfL --retry "$MAX_RETRIES" -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists" \
+current_lists=$(curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists" \
     -H "Authorization: Bearer ${API_TOKEN}" \
     -H "Content-Type: application/json") || error "Failed to get current lists from Cloudflare"
     
 # Get current policies from Cloudflare
-current_policies=$(curl -sSfL --retry "$MAX_RETRIES" -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/rules" \
+current_policies=$(curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/rules" \
     -H "Authorization: Bearer ${API_TOKEN}" \
     -H "Content-Type: application/json") || error "Failed to get current policies from Cloudflare"
 
@@ -92,7 +92,7 @@ if [[ ${current_lists_count} -gt 0 ]]; then
         echo "Updating list ${list_id}..."
 
         # Get list contents
-        list_items=$(curl -sSfL --retry "$MAX_RETRIES" -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}/items?limit=${MAX_LIST_SIZE}" \
+        list_items=$(curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X GET "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}/items?limit=${MAX_LIST_SIZE}" \
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json") || error "Failed to get list ${list_id} contents"
 
@@ -109,7 +109,7 @@ if [[ ${current_lists_count} -gt 0 ]]; then
         }')
 
         # Patch list
-        list=$(curl -sSfL --retry "$MAX_RETRIES" -X PATCH "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}" \
+        list=$(curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X PATCH "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}" \
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json" \
         --data "$payload") || error "Failed to patch list ${list_id}"
@@ -141,7 +141,7 @@ for file in "${chunked_lists[@]}"; do
     }')
 
     # Create list
-    list=$(curl -sSfL --retry "$MAX_RETRIES" -X POST "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists" \
+    list=$(curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X POST "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists" \
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json" \
         --data "$payload") || error "Failed to create list"
@@ -229,7 +229,7 @@ json_data='{
 {
     # Create the policy
     echo "Creating policy..."
-    curl -sSfL --retry "$MAX_RETRIES" -X POST "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/rules" \
+    curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X POST "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/rules" \
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json" \
         --data "$json_data" > /dev/null || error "Failed to create policy"
@@ -237,7 +237,7 @@ json_data='{
 {
     # Update the policy
     echo "Updating policy ${policy_id}..."
-    curl -sSfL --retry "$MAX_RETRIES" -X PUT "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/rules/${policy_id}" \
+    curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X PUT "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/rules/${policy_id}" \
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json" \
         --data "$json_data" > /dev/null || error "Failed to update policy"
@@ -246,7 +246,7 @@ json_data='{
 # Delete excess lists in $excess_list_ids
 for list_id in "${excess_list_ids[@]}"; do
     echo "Deleting list ${list_id}..."
-    curl -sSfL --retry "$MAX_RETRIES" -X DELETE "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}" \
+    curl -sSfL --retry "$MAX_RETRIES" --retry-all-errors -X DELETE "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/gateway/lists/${list_id}" \
         -H "Authorization: Bearer ${API_TOKEN}" \
         -H "Content-Type: application/json" > /dev/null || error "Failed to delete list ${list_id}"
 done
