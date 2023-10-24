@@ -16836,7 +16836,6 @@ geoip.oregonlive.com
 geoip.pennlive.com
 geoip.silive.com
 geoip.syracuse.com
-geoloc.hurriyet.com.tr
 geolsoul.life
 geoplugin.net
 georgianabamboorehearse.com
@@ -24392,7 +24391,6 @@ mooxar.com
 mopedisods.com
 mopefrequent.com
 mopnixhem.com
-mopo.jp
 mopub-win-us-east.bksn.se
 mopub.com
 moracy.com
