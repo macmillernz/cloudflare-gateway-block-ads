@@ -3024,6 +3024,7 @@ adserver2.mindshare.de
 adserverplus.com
 adserverpub.com
 adserversolutions.com
+adservetx.media.net
 adservice.tohsoft.com
 adserving.unibet.com
 adservinginternational.com
@@ -23653,7 +23654,6 @@ media.alphaload.com
 media.aso.altapress.ru
 media.dabong247.com
 media.funpic.de
-media.net
 media.netrefer.com
 media5.fc2.com
 media6degrees.com
@@ -34380,6 +34380,7 @@ static.jadspro.live
 static.jampp.com
 static.landingtrk.com
 static.masoffer.net
+static.media.net
 static.mediacpc.com
 static.mediahubserver.com
 static.mediastinct.com
@@ -40468,10 +40469,6 @@ wwrpfevyca.com
 www-banner.chat.ru
 www-google-analytics.l.google.com
 www.7-7-7-partner.com
-www.gmx37.top
-www.iornsfyhueev.com
-www.psycholjicaque.com
-www.zhyivocrjeplby.com
 www4.hentai-rpg.com
 www4.hentaigamecg.com
 www5.oss-cn-hangzhou.aliyuncs.com
