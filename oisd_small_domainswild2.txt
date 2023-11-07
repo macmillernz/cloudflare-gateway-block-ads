@@ -8428,7 +8428,6 @@ cdn.pctv.xyz
 cdn.pranmcpkx.com
 cdn.raekdata.com
 cdn.rlets.com
-cdn.roemoss.com
 cdn.sblhp.com
 cdn.sdtraff.com
 cdn.shrtfly.vip
@@ -30477,6 +30476,7 @@ rodroord.net
 roduster.com
 roebuckwagged.com
 roelikewimpler.com
+roemoss.com
 rof77skt5zo0.com
 rog4.com
 roi.ediscom.it
