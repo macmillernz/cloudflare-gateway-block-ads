@@ -4,7 +4,7 @@
 API_TOKEN="$API_TOKEN"
 ACCOUNT_ID="$ACCOUNT_ID"
 PREFIX="Block ads"
-MAX_RETRIES=5
+MAX_RETRIES=10
 
 # Define error function
 function error() {

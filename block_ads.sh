@@ -6,7 +6,7 @@ ACCOUNT_ID="$ACCOUNT_ID"
 PREFIX="Block ads"
 MAX_LIST_SIZE=1000
 MAX_LISTS=100
-MAX_RETRIES=5
+MAX_RETRIES=10
 
 # Define error function
 function error() {
