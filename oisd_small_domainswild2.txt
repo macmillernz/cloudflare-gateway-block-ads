@@ -4387,8 +4387,8 @@ aklorswikk.com
 akmxts.com
 aksao.com
 aksleaj.com
+akstat.io
 aktivator-windows10.blogspot.com
-aktrack.pubmatic.com
 aktwusgwep.com
 akuhni.by
 akusherok.ru
@@ -7115,6 +7115,7 @@ bea-s.dinghuoche.com
 bea4f47fc3.com
 beacher56.xyz
 beacon-api.aliyuncs.com
+beacon-fullpage-predictor.goguardian.com
 beacon.carfax.com
 beacon.cdn.qq.com
 beacon.digima.com
@@ -10968,6 +10969,7 @@ countriesnews.com
 countryinflammable.com
 countrynot.com
 countshryw.xyz
+countvoncount.goguardian.com
 countypuddleillusion.com
 coupbezzant.com
 coupleairplane.com
@@ -12717,6 +12719,7 @@ data.econa.com
 data.kameleoon.io
 data.mimikama.at
 data.mistat.india.xiaomi.com
+data.mistat.rus.xiaomi.com
 data.mistat.xiaomi.com
 data.mob.com
 data.sec.intl.miui.com
@@ -15981,6 +15984,7 @@ expugi.com
 exquisitefundlocations.com
 exrtbsrv.com
 ext.bhol.co.il
+ext.goguardian.com
 ext.host-tracker.com
 extend.tv
 extensions-media.com
@@ -20819,6 +20823,7 @@ inputunstable.com
 inquiredcriticalprosecution.com
 inquiriesdishonest.com
 inquiryclank.com
+inquisition.goguardian.com
 inrecsys.popin.cc
 inrhyhorntor.com
 inringtone.com
@@ -21042,6 +21047,7 @@ iot-eu-logser.realme.com
 iot-logser.realme.com
 ioward.com
 ioxffew.com
+ip.goguardian.com
 ip.hivps.xyz
 ip.momentummedia.com.au
 ip.prvtx.net
@@ -21621,7 +21627,6 @@ joathath.com
 joathihandsr.xyz
 jobfilletfortitude.com
 joblouder.com
-jobmkewrymmvb.top
 jobsyndicate.com
 jocauzee.net
 jocelynrace.com
@@ -28116,7 +28121,6 @@ ovfvkfc.xyz
 ovibospeseta.com
 ovqds.com
 ovsrhikuma.com
-ow.pubmatic.com
 ow5a.net
 owascryingforthem.info
 owbroinothiermol.xyz
@@ -28375,6 +28379,7 @@ pantdentaldonate.com
 panther.atgonlinecoaching.com
 panther.codyhatfield.me
 panther.essentialwellnessyoga.com.au
+panther.goguardian.com
 panther.hoprnet.org
 panther.thestocks.im
 panther.tigil.rs
@@ -30481,6 +30486,7 @@ publited.com
 publpush.com
 publyads.jstag.space
 pubmaner5.com
+pubmatic.com
 pubmine.com
 pubnation.com
 pubnative.info
@@ -31019,6 +31025,7 @@ quickorange.com
 quicksandear.com
 quickwriter.com
 quickzo.xyz
+quiddity.goguardian.com
 quietannouncementdove.com
 quietlybananasmarvel.com
 quigo.com
@@ -33060,6 +33067,7 @@ sakeoxidelunch.com
 sakguz.icu
 saktismberakes.space
 sakura-traffic.com
+sakura.goguardian.com
 sal.isanook.com
 sala5.it
 salablyjagless.uno
@@ -33350,6 +33358,7 @@ screechdonationshowed.com
 screen.buzzvil.com
 screenshare.pics
 screenshot.best
+screenshots.goguardian.com
 scribblemidday.com
 scribe.wongnai.com
 script-ad.mobadme.jp
@@ -33406,7 +33415,6 @@ sdkv2.imaginationunwired.com
 sdmfyqkghzedvx.com
 sdprsvbnj.xyz
 sdtagging.azureedge.net
-sdtsad.com
 sdxzqec.xyz
 se05.biz
 seaboblit.com
@@ -33976,7 +33984,6 @@ shovedrailwaynurse.com
 show-me-how.net
 show-review.com
 show.kc.taotaosou.com
-showads.pubmatic.com
 showcasethat.com
 showerymartial.com
 showingdoppia.guru
@@ -34489,6 +34496,7 @@ snappedtesting.com
 snaprosery.com
 snaretoeburp.work
 snarewholly.com
+snat.goguardian.com
 snebbubbled.com
 sneezeinterview.com
 sngmta.qq.com
@@ -41639,6 +41647,8 @@ x0r.urlgalleries.net
 x1.52aoteman.com
 x1.kantu.com
 x2tsa.com
+x3-policy-maker.goguardian.com
+x3-predictor.goguardian.com
 x5hnj21.com
 x6.yakiuchi.com
 x7r3mk6ldr.com
@@ -42261,7 +42271,6 @@ ydfavbj.com
 ydgh0zc.com
 ydonkuan.com
 ydtqlmsvocjp.com
-ydyympasqrx.com
 ye185hcamw.com
 yeabble.com
 yeah1publishing.com
