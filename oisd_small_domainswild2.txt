@@ -41039,7 +41039,6 @@ us-events.api.iheart.com
 us-tracking.nextdoor.com
 us.a1.yimg.com
 us4post.com
-usa.cc
 usage.influxdata.com
 usageanalytics.coveo.com
 usapromotravel.com
