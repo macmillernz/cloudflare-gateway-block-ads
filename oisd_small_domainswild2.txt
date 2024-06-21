@@ -31096,7 +31096,6 @@ playdraught.com
 player-feedback.p7s1video.net
 player-telemetry.vimeo.com
 player.anyclip.com
-player.gliacloud.com
 player.stats.live-video.net
 playeranyd.org
 playeranydwo.info
