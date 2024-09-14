@@ -13849,7 +13849,6 @@ data.r.pl
 data.sec.intl.miui.com
 data.sec.miui.com
 data.streamtape.com
-data.tm-awx.com
 data.waptime.cn
 data.woosmap.com
 data2.doodlemobile.com
@@ -35605,8 +35604,6 @@ selwrite.com
 semblanceafford.com
 semblanceindulgebellamy.com
 semeeclots.top
-semena.cz
-semenaonline.cz
 semenaonline.sk
 semhgk.xyz
 semi-cod.nnmclub.ch
@@ -45531,7 +45528,6 @@ zerads.com
 zercenius.com
 zerg.pro
 zerodecisive.com
-zesemen.cz
 zestpocosin.com
 zetamm.com
 zetheesug.com
