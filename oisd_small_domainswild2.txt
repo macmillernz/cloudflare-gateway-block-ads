@@ -3074,7 +3074,6 @@ adpublisher.s3.amazonaws.com
 adpush.goforandroid.com
 adqit.com
 adquery.io
-adquet.com
 adquota.com
 adrazzi.com
 adrcdn.com
