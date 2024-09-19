@@ -3149,6 +3149,7 @@ ads-partners.coupang.com
 ads-platform.zalo.me
 ads-query.luizalabs.com
 ads-resources.waze.com
+ads-router-noneu.truecaller.com
 ads-sdk.mattel163.com
 ads-sdk.nianticlabs.com
 ads-server.mxplay.com
@@ -5123,6 +5124,7 @@ analcreampie.net
 anale-sex.nl
 analitica.webrpp.com
 analitik.bik.gov.tr
+analitik.pendik.bel.tr
 analitits.com
 analog.cell.phone.service.sms13.de
 analog.sms13.de
