@@ -3211,7 +3211,6 @@ ads-sg.tiktok.com
 ads-static.conde.digital
 ads-static.recon.com
 ads-thanhnien-vn.cdn.ampproject.org
-ads-tracking.beop.io
 ads-tracking.beopinion.com
 ads-trk.vidible.tv
 ads-twitter.com
@@ -7676,7 +7675,6 @@ bda1.ayule.net
 bdapi-ads.realmemobile.com
 bdapi-in-ads.realmemobile.com
 bdasd.chdbook.cn
-bdawrsi.icu
 bdc92feedb.ddb284b21b.com
 bdckqpofmclr.com
 bdcm.kandianla.com
@@ -17460,7 +17458,6 @@ ferret.linksoftwarellc.com
 ferret.tailgraph.com
 ferrisoisin.com
 ferrycontinually.com
-fertilestared.com
 fertilisedforesee.com
 fertilizerpairsuperserver.com
 fesibsou.net
@@ -19010,7 +19007,6 @@ gimme-promo.com
 gimmicked25.fun
 gimmickry26.fun
 gimnsr.com
-gimoguvi.ru
 gimpsgenips.com
 ginbabxfjs.com
 ginchoirblessed.com
@@ -19693,7 +19689,6 @@ groameeb.com
 groampez.xyz
 groamsal.net
 groaxonsoow.net
-groazaimsadroa.xyz
 grobungairdoul.net
 grobuveexeb.net
 grocerycookerycontract.com
@@ -22385,7 +22380,6 @@ janitorhalfchronicle.com
 januaryprinter.com
 japanbros.com
 japanhotties.jp
-japegr.click
 japfg-trending-content.uc.r.appspot.com
 japootchust.net
 jaqxaqoxwhce.com
@@ -25227,7 +25221,6 @@ ma-adx.ctrip.com
 ma.news.naver.com
 ma.tgdd.vn
 ma.zoho.eu
-ma1.meishij.net
 ma3ion.com
 maanatirve.top
 macan-native.com
@@ -28875,7 +28868,6 @@ ordinarilyrehearsenewsletter.com
 ordinghology.com
 ordisposableado.com
 orebuthehadsta.info
-orecticconchae.com
 oremantolsey.com
 orest-vlv.com
 oretracker.top
@@ -30114,7 +30106,6 @@ picbitok.com
 piccash.net
 pichost.pics
 pickaflick.co
-pickaxerelict.shop
 pickedincome.com
 picklecandourbug.com
 picklesdumb.com
@@ -30131,7 +30122,6 @@ picsti.com
 pictorialtraverse.com
 picturesquesizedisabled.com
 picturestash.mom
-pieairshed.top
 pieceresponsepamphlet.com
 pieclayton.com
 pienbitore.com
@@ -31166,7 +31156,6 @@ probessanggau.com
 problemhickory.top
 probtn.com
 proceedingdream.com
-proceedingmusic.com
 processedagrarian.com
 processingcomprehension.com
 processionhardly.com
@@ -31478,7 +31467,6 @@ psoroumukr.com
 psothoms.com
 psotudev.com
 psougrie.com
-psozoult.net
 psstt.com
 pstnmhftix.xyz
 psuaqpz.com
@@ -35863,7 +35851,6 @@ smp.tus.ac.jp
 smpl.hit.ppdb.pl
 smpop.icfcdn.com
 smrt-cdn.com
-smrtbnr.com
 smrtbnr.info
 smsapiens.com
 smtpgw.aomg5bzv7.com
@@ -42979,7 +42966,6 @@ wobbly-birth.com
 wocwibkfutrj.com
 woefifty.com
 woeful-trash.pro
-woespoke.com
 woevr.com
 wofulsamixee.net
 wogglehydrae.com
@@ -44079,7 +44065,6 @@ yjustingexcelele.org
 ykad-data.youku.com
 ykkhihg.cn
 ykq3pfmcxw9lqmn2.quicknewssurge.com
-ykqcsawnlnvsgo.com
 yktj.yzz.cn
 ykwykw.xyz
 yl-sooippd.vip
