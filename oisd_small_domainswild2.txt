@@ -34551,7 +34551,6 @@ service.adlinknetwork.vn
 service.trustpid.com
 servicegetbook.net
 services.bionika-digital.ru
-services.haaretz.com
 services.hearstmags.com
 services.sdiapi.com
 services.wetek.com
